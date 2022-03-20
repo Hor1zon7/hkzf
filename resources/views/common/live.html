@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>用户测试用例</title>
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.18/skins/default/aliplayer-min.css" />
+    <script charset="utf-8" type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.9.18/aliplayer-min.js"></script>
+</head>
+<body>
+<div class="prism-player" id="J_prismPlayer"></div>
+<script>
+    var player = new Aliplayer({
+        id: 'J_prismPlayer',
+        width: '100%',
+        autoplay: true,
+       // cover: '<your cover URL>',//可选公共参数。视频封面图片地址。用户自定义的可以被访问到的网络图片。本参数传入的URL优先级最高，会覆盖通过获取视频播放凭证接口获取的CoverURL。
+        // 播放方式一、播放地址播放。此方式播放优先级最高。
+        source : 'http://live.taylorswift.cloud/taylor/swift.flv?auth_key=1646789681-0-0-29eb4f7d501b3ea740ac12b16e4710de',//播放方式一必选参数。可以是第三方直播或点播地址、阿里云直播服务中的播放地址，或阿里云点播服务中的播放地址。
+    },function(player){
+        console.log('The player is created.')
+    });
+</script>
+</body>
+</html>
